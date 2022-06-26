@@ -5,10 +5,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: prod ? 'production' : 'development',
-  entry: './src/index.tsx',
+  entry: './src/templates/index.tsx',
   output: {
     filename: 'bundle.js',
-    path: __dirname + '/dist/'
+    path: __dirname + '/dist/',
+    hashFunction: "sha256" // Fix error: "digital envelope routines::unsupported"
   },
   module: {
     rules: [
