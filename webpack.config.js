@@ -30,7 +30,7 @@ module.exports = {
   devtool: prod ? undefined : 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: 'src/templates/index.html',
     }),
     new MiniCssExtractPlugin(),
   ],
